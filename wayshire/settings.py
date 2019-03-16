@@ -33,7 +33,7 @@ SECRET_KEY = '**z)7umra^pxlpe$rcz@gd1zvb#q-ny6wbmq98+lrc3&0+t=!x'
 # DEBUG = True
 
 ALLOWED_HOSTS = []
-LOGIN_REDIRECT_URL='home'
+LOGIN_REDIRECT_URL='dashboard'
 IMPORT_EXPORT_USE_TRANSACTIONS = True
 
 

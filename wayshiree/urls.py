@@ -5,11 +5,11 @@ from .forms import *
 from .views import *
 from . import views
 urlpatterns=[
-url(r'^$', views.index, name='home'),
+url(r'^$', views.dashboard, name='dashboard'),
 url(r'^home/$', views.index, name='home'),
 url(r'^finance/$', views.finance, name='finance'),
 url(r'^loading/$', views.loading, name='loading'),
-url(r'^dashboard/$', views.loading_dashboard, name='dashboard'),
+url(r'^loading_dashboard/$', views.loading_dashboard, name='loading_dashboard'),
 url(r'^delivery/edit/(?P<delivery_id>\d+)/$', views.edit_delivery, name='edit_delivery'),
 
 url(r'^fleet/(?P<truck_id>\d+)/$', views.show, name='show'),

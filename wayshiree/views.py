@@ -57,6 +57,9 @@ def index(request):
 
     return render(request, 'index.html', {'trucks': trucks})
 @login_required(login_url='/accounts/login/')
+def dashboard(request):
+    return render(request, 'dashboard.html')
+@login_required(login_url='/accounts/login/')
 def loading(request):
     loaded = Order.objects.filter(Q(order_status='Loaded') | Q(order_status='Released')| Q(order_status='Received') )[0:200]
     # loaded =   Loaded.objects.filter(order__order_status__in=['Loaded', 'Released'])

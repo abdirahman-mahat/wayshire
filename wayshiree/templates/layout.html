@@ -22,6 +22,8 @@
 		<link type="text/css" rel="stylesheet" href="{% static 'css/libs/DataTables/extensions/dataTables.colVis.css' %}" />
 		<link type="text/css" rel="stylesheet" href="{% static 'css/libs/DataTables/extensions/dataTables.tableTools.css' %}" />
         <link type="text/css" rel="stylesheet" href="{% static 'css/print.css' %}" />
+				<link type="text/css" rel="stylesheet" href="{% static 'css/styles.css' %}" />
+
 				<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 		<!-- END STYLESHEETS -->
 
@@ -129,7 +131,7 @@
 
 						<!-- BEGIN DASHBOARD -->
 						<li>
-							<a href="{% url 'home' %}" class="active">
+							<a href="{% url 'dashboard' %}" class="active">
 								<div class="gui-icon"><i class="md md-home"></i></div>
 								<span class="title">Dashboard</span>
 							</a>
@@ -169,7 +171,7 @@
 											<span class="title">Lc1</span>
 										</a>
 										<ul>
-									<li><a href="{% url 'dashboard' %}" ><span class="title">Dashboard</span></a></li>
+									<li><a href="{% url 'loading_dashboard' %}" ><span class="title">Dashboard</span></a></li>
 									<li><a href="{% url 'loading' %}" ><span class="title">Loadings</span></a></li>
 								</ul>
 							</ul>
