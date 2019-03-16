@@ -14,7 +14,7 @@ from .resources import *
 from tablib import Dataset
 from dal import autocomplete
 from django.views.generic import ListView
-# from django.contrib.postgres.search import SearchQuery, SearchRank, SearchVector
+from django.contrib.postgres.search import SearchQuery, SearchRank, SearchVector
 from django.db.models import Sum
 from django.db.models import Count
 
