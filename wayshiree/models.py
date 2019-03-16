@@ -66,8 +66,8 @@ class Delivery(models.Model):
     recieved_quantity = models.IntegerField()
     shortage = models.IntegerField(null=True)
 
-    class Meta:
-        verbose_name = "deliverie"
+    # class Meta:
+    #     verbose_name = "deliverie"
     def __str__(self):
         truck = self.truck
         return str(truck)
