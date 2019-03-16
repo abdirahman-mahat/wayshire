@@ -1,0 +1,20 @@
+{% extends "admin/base.html" %}
+
+{% load static %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">
+    <a href="{% url 'admin:index' %}">
+        <img src="{% static 'img/Wayshire_Logo.png' %}" height="40px"  />
+    </a>
+</h1>
+{% endblock %}
+{% block extrahead %}
+    {{ block.super }}
+    <script src="{% static 'admin/js/vendor/jquery/jquery.min.js' %}" type="text/javascript"></script>
+    {% include 'autocomplete_light/static.html' %}
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

@@ -1,0 +1,50 @@
+{% load bootstrap3 %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="your,keywords">
+  <meta name="description" content="Short explanation about this website">
+
+  {%if title%}
+
+  <title>{{title}}</title>
+{% else %}
+<title>Login | WAYSHIRE LIMITED</title>
+
+  {%endif%}
+
+  {% block styles %}
+    {% bootstrap_css %}
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300italic,400italic,300,400,500,700,900' rel='stylesheet' type='text/css'/>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+    <link type="text/css" rel="stylesheet" href="{% static 'css/materialadmin.css' %}" />
+    <link type="text/css" rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" />
+    <link type="text/css" rel="stylesheet" href="{% static 'css/material-design-iconic-font.min.css' %}" />
+    <!-- END STYLESHEETS -->
+  {% endblock %}
+
+</head>
+
+<body>
+
+  {% block content %}  {%endblock%}
+
+
+  {% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    {% bootstrap_javascript %}
+    <script src="{% static 'js/libs/jquery/jquery-1.11.2.min.js' %}"></script>
+		<script src="{% static 'js/libs/bootstrap/bootstrap.min.js' %}"></script>
+
+		<script src="{% static 'js/core/AppForm.js' %}"></script>
+  {% endblock %}
+
+</body>
+
+</html>

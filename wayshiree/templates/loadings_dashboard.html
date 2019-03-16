@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+
+{% block title %} Loadings Dashboard {% endblock %}
+
+{% block body %}
+                <section>
+                    <div class="section-body">
+                        <!-- BEGIN DATATABLE 2 -->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-head style-primary">
+                                        <header>Loadings Dashboard</header>
+                                        <div class="tools">
+                                            <a class="btn btn-icon-toggle btn-collapse"><i class="fa fa-angle-down"></i></a>
+                                            <a class="btn btn-icon-toggle btn-close"><i class="md md-close"></i></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table  class="table order-column hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Product</th>
+                                                        <th>Loading Average</th>
+                                                        <th>Expect Quantity</th>
+                                                        <th>Loaded Quantity</th>
+                                                        <th>Remaining Quantity</th>
+                                                        <th>Total Trucks</th>
+                                                        <th>Loaded Trucks</th>
+                                                        <th>Remaining Trucks</th>
+
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {% for dash in loaded %}
+                                                      <tr class="gradeX">
+                                                      <td>{{dash.product}}</td>
+                                                      <td>{{dash.loading_average}}</td>
+                                                      <td>{{dash.expect_quantity}}</td>
+                                                      <td>{{dash.loaded_quantity}}</td>
+                                                      <td>{{dash.remaining_quantity}}</td>
+                                                      <td>{{dash.total_trucks}}</td>
+                                                      <td>{{dash.loaded_trucks}}</td>
+                                                      <td>{{dash.remaining_trucks}}</td>
+
+                                                        </tr>
+                                                    {% endfor %}
+                                                </tbody>
+                                            </table>
+                                        </div><!--end .table-responsive -->
+                                    </div>
+                                </div>
+                            </div><!--end .col -->
+                        </div><!--end .row -->
+                        <!-- END DATATABLE 2 -->
+
+                    </div><!--end .section-body -->
+                </section>
+{% endblock %}
