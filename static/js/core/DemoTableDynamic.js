@@ -62,7 +62,7 @@
 		var table = $('#datatable2').DataTable({
 			"dom": 'T<"clear">lfrtip',
 			"tableTools": {
-				"sSwfPath": "http://cdn.datatables.net/tabletools/2.2.2/swf/copy_csv_xls_pdf.swf",
+				"sSwfPath": "https://cdn.datatables.net/tabletools/2.2.2/swf/copy_csv_xls_pdf.swf",
 			},
 			"order": [[1, 'desc']],
 			"language": {
